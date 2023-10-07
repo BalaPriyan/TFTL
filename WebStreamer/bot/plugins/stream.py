@@ -61,7 +61,7 @@ async def channel_receive_handler(bot, broadcast: Message):
             chat_id=broadcast.chat.id,
             message_id=broadcast.id,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Dᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📥", url=stream_link)]])
+                [[InlineKeyboardButton("Dᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📥", url=stream_link), InlineKeyboardButton("Updates", "https://t.me/TomenBots)]])
         )
     except FloodWait as w:
         print(f"Sleeping for {str(w.value)}s")
