@@ -1,14 +1,12 @@
-FROM python:3
+FROM python:3.8-slim
 
-# Set the working directory within the container
 WORKDIR /app
 
-# Copy the project files into the container
-COPY . /app
+COPY . .
 
 
-# Activate the virtual environment and install dependencies
-RUN pip install -r requirements.txt"
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Define the command to run your module
-CMD [ "python", "-m", "WebStreamer" 
+
+
+CMD ["python", "-m", "WebStreamer"]
