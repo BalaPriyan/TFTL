@@ -53,7 +53,7 @@ async def channel_receive_handler(bot, broadcast: Message):
         reply_markup, Stream_Text, stream_link = await gen_link(m=broadcast, log_msg=log_msg, from_channel=True)
         await log_msg.reply_text(
             text=f"**Cʜᴀɴɴᴇʟ Nᴀᴍᴇ:** `{broadcast.chat.title}`\n**Cʜᴀɴɴᴇʟ ID:** `{broadcast.chat.id}`\n**Rᴇǫᴜᴇsᴛ ᴜʀʟ:** {stream_link}",
-            # text=f"**Cʜᴀɴɴᴇʟ Nᴀᴍᴇ:** `{broadcast.chat.title}`\n**Cʜᴀɴɴᴇʟ ID:** `{broadcast.chat.id}`\n**Rᴇǫᴜᴇsᴛ ᴜʀʟ:** https://t.me/FxStreamBot?start=msgid_{str(log_msg.id)}",
+            # text=f"**Cʜᴀɴɴᴇʟ Nᴀᴍᴇ:** `{broadcast.chat.title}`\n**Cʜᴀɴɴᴇʟ ID:** `{broadcast.chat.id}`\n**Rᴇǫᴜᴇsᴛ ᴜʀʟ:** https://t.me/xadmin_filetolinkbot?start=msgid_{str(log_msg.id)}",
             quote=True,
             parse_mode=ParseMode.MARKDOWN
         )
@@ -61,7 +61,7 @@ async def channel_receive_handler(bot, broadcast: Message):
             chat_id=broadcast.chat.id,
             message_id=broadcast.id,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Dᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📥", url=stream_link), InlineKeyboardButton("Updates", "https://t.me/TomenBots)]])
+                [[InlineKeyboardButton("Dᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📥", url=stream_link), InlineKeyboardButton("Updates", "https://t.me/TomenBots")]])
         )
     except FloodWait as w:
         print(f"Sleeping for {str(w.value)}s")
