@@ -10,7 +10,7 @@ COPY . /app
 RUN python -m venv venv
 
 # Activate the virtual environment and install dependencies
-RUN /bin/bash -c "source venv/bin/activate && pip install -r requirements.txt"
+RUN pip install -r requirements.txt"
 
 # Define the command to run your module
-CMD [ "venv/bin/python", "-m", "WebStreamer" 
+CMD [ "python", "-m", "WebStreamer" 
